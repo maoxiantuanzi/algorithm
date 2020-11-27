@@ -1,9 +1,11 @@
+
 from collections import Counter
 
 import numpy as np
 import numpy.random as random
 
 class KNN:
+
 	def __init__(self, k):
 		self.k = k
 		self.X_train = None
