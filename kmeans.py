@@ -1,7 +1,7 @@
 import numpy as np
 import numpy.random as random
 
-class K_Means(object):
+class K_Means:
 	def __init__(self, k=2, max_iter=100):
 		self.k = k
 		self.max_iter = max_iter
