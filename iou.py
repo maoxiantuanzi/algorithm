@@ -10,8 +10,8 @@
 def computing_iou(rec1, rec2):
 	"""
 	computing iou of two rectangle
-	:param rec1: (y0, x0, y1, x1), which means(top, left, bottom, right)
-	:param rec2: (y0, x0, y1, x1)
+	:param rec1: (x0, y0, x1, y1), which means(left, top, right, bottom)
+	:param rec2: (x0, y0, x1, y1)
 	"""
 
 	# 1. computing area of each rectangle
@@ -22,10 +22,10 @@ def computing_iou(rec1, rec2):
 	area_sum = area_rec1 + area_rec2
 
 	# 3. find four edges of intersect rectangle
-	top = max(rec1[0], rec2[0])
-	left = max(rec1[1], rec2[1])
-	bottom = min(rec1[2], rec2[2])
-	right = min(rec1[3], rec2[3])
+	left = max(rec1[0], rec2[0])
+	top = max(rec1[1], rec2[1])
+	right = min(rec1[2], rec2[2])
+	bottom = min(rec1[3], rec2[3])
 
 	# 4. determining if there is an intersection
 	if top >= bottom or left >= right:
